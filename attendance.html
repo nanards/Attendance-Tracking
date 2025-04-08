@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Attendance Tracker</title>
+    <link rel="stylesheet" href="attendance.css">
+    <script src="attendance.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <a href="dashboard.html">Go to Dashboard</a>
+</head>
+<body>
+    <div class="container">
+        <h1>Event Attendance Tracker</h1>
+
+
+        <form id="attendanceForm">
+            <div class="form-group">
+                <label for="name">Participant Name:</label>
+                <input type="text" id="name" required placeholder="Enter name">
+            </div>
+
+
+            <div class="form-group">
+                <label for="email">Participant Email:</label>
+                <input type="email" id="email" placeholder="Enter email">
+            </div>
+
+
+            <div class="form-group">
+                <label for="status">Attendance Status:</label>
+                <select id="status">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+            </div>
+
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" required placeholder="Enter Address">
+                </div>
+
+
+            <button type="submit" id="markAttendance">Mark Attendance</button>
+        </form>
+   
+
+
+        <!-- QR Code for tracking attendance -->
+        <div class="qr-code">
+            <h2>Scan this QR Code to mark your attendance:</h2>
+            <div id="qrCodeContainer"></div>
+        </div>
+    </div>
+
+
+    <script src="attendance.js"></script>
+</body>
+</html>
